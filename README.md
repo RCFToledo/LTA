@@ -36,6 +36,36 @@
 
 ---
 
+## 📋 Caso de Uso
+
+![image](https://github.com/user-attachments/assets/0136db57-2cda-4b86-a4d5-44444de920b1)
+
+---
+
+## Métricas Para o Desenvolvimento de Software 
+
+### Conformidade aos prazos:  
+
+- O quão alinhado está o desenvolvimento aos prazos definidos 
+- Mede a capacidade de planejamento e organização da equipe 
+
+### Progresso concluído: 
+
+- Quanto do que é esperado de cada entrega e o quanto foi entregue 
+- É importante para medir o progresso do sistema e como ele se compara com o planejado 
+
+### Quantidade e impacto de novos bugs: 
+
+- Quantos e o quão impactantes são os eventuais bugs do sistema 
+- Serve para dar uma melhor noção de como está a qualidade do desenvolvimento, medindo se a quantidade está dentro do esperado e se a proporção de bugs críticos está baixa 
+
+### Velocidade e qualidade de correção de bugs: 
+
+- O quão rápido os bugs estão sendo corrigidos e o quão efetivas são as soluções aplicadas 
+- É importante para medir a capacidade de correção de bugs e pontos em que ela pode ser melhorada 
+
+---
+
 ## ✅ Plano de Testes
 
 ### 🧪 Casos de Teste Funcionais
