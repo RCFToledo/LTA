@@ -42,6 +42,14 @@
 
 ---
 
+## Interface
+
+### A interface foi feita por meio do figma
+
+- https://www.figma.com/design/uKipizdqZk7or4YKeKME6m/Untitled?node-id=0-1&p=f&t=Gx92mE684oIMYmJt-0
+
+---
+
 ## Métricas Para o Desenvolvimento de Software 
 
 ### Conformidade aos prazos:  
@@ -63,6 +71,33 @@
 
 - O quão rápido os bugs estão sendo corrigidos e o quão efetivas são as soluções aplicadas 
 - É importante para medir a capacidade de correção de bugs e pontos em que ela pode ser melhorada 
+
+---
+
+## Cálculo de Pontos de Função
+
+| Tipo de Função | Complexidade Funcional | Fator de Peso | Quantidade | Total por Complexidade |
+| -------------- | ---------------------- | ------------- | ---------- | ---------------------- |
+| **EE**         | Baixa                  | x 3           | 0          | 0                      |
+|                | Média                  | x 4           | 0          | 0                      |
+|                | Alta                   | x 6           | 0          | 0                      |
+|                | **Total EE**           |               |            | **0**                  |
+| **SE**         | Baixa                  | x 4           | 0          | 0                      |
+|                | Média                  | x 5           | 0          | 0                      |
+|                | Alta                   | x 7           | 0          | 0                      |
+|                | **Total SE**           |               |            | **0**                  |
+| **CE**         | Baixa                  | x 3           | 0          | 0                      |
+|                | Média                  | x 4           | 0          | 0                      |
+|                | Alta                   | x 6           | 0          | 0                      |
+|                | **Total CE**           |               |            | **0**                  |
+| **ALI**        | Baixa                  | x 7           | 0          | 0                      |
+|                | Média                  | x 10          | 0          | 0                      |
+|                | Alta                   | x 15          | 0          | 0                      |
+|                | **Total ALI**          |               |            | **0**                  |
+| **AIE**        | Baixa                  | x 5           | 0          | 0                      |
+|                | Média                  | x 7           | 0          | 0                      |
+|                | Alta                   | x 10          | 0          | 0                      |
+|                | **Total AIE**          |               |            | **0**                  |
 
 ---
 
