@@ -42,6 +42,68 @@
 
 ---
 
+# 📘 Narrativa do Sistema “Controle de Campeonato Esportivo (LTA)”
+
+O sistema **Controle de Campeonato Esportivo (LTA)** foi desenvolvido para atender às necessidades dos principais envolvidos em um campeonato esportivo, incluindo **Clientes**, **Gerentes de Equipe** e o **Administrador da Confederação**. A seguir, detalhamos os papéis e os casos de uso de cada ator.
+
+---
+
+## 👤 Cliente
+
+O **Cliente** é o usuário comum do sistema, responsável por acompanhar o campeonato e interagir com funcionalidades relacionadas a jogos e palpites. Ele possui acesso a cinco funcionalidades principais:
+
+- **Visualizar Times**  
+  Permite ao cliente conhecer as equipes participantes. Este caso de uso pode ser estendido a partir do cadastro e edição das equipes, realizado pelos gerentes.
+
+- **Visualizar Resultados e Placar**  
+  Possibilita ao cliente ver os placares atualizados das partidas. Este caso também pode ser estendido com base nos dados cadastrados pelos outros atores.
+
+- **Visualizar Partidas**  
+  Permite acompanhar a programação dos jogos. Esse caso é estendido pelas ações de agendamento de eventos.
+
+- **Fazer Palpite**  
+  O cliente pode dar palpites sobre o resultado dos jogos. Este caso de uso inclui o caso **Verificar Palpites**, que possibilita ao cliente acompanhar se seus palpites foram corretos.
+
+- **Verificar Palpites**  
+  Este caso estende a funcionalidade **Gerenciar Palpites**, que é realizada pelo administrador.
+
+---
+
+## 👤 Gerente de Equipe
+
+O **Gerente de Equipe** é responsável pelas informações das equipes no sistema. Ele pode:
+
+- **Cadastrar e Editar Equipe**  
+  Criar e manter os dados das equipes participantes.
+
+- **Cadastrar e Editar Membros**  
+  Adicionar ou modificar os dados dos membros da equipe.
+
+Essas funcionalidades impactam diretamente nos dados que os clientes acessam ao visualizar times e resultados.
+
+---
+
+## 👤 Administrador da Confederação
+
+O **Administrador da Confederação** é o responsável pelas ações organizacionais do campeonato. Ele pode:
+
+- **Agendar e Gerenciar Eventos**  
+  Definir as datas e horários dos jogos, o que estende o caso de uso de **Visualizar Partidas** para os clientes.
+
+- **Gerenciar Palpites**  
+  Controlar e validar os palpites realizados pelos clientes, o que estende a funcionalidade de **Verificar Palpites**.
+
+---
+
+## 🧩 Relações Entre Casos de Uso
+
+- As setas com `<<extends>>` indicam que determinado caso de uso pode ser complementado com outro. Por exemplo, visualizar times pode ser enriquecido com dados de cadastro feitos pelo gerente.
+
+- A seta com `<<includes>>` entre “Fazer Palpite” e “Verificar Palpites” indica que sempre que um palpite é feito, o sistema deve incluir o recurso de verificação para validar posteriormente os resultados.
+
+
+---
+
 ## Interface
 
 ### A interface foi feita por meio do figma
