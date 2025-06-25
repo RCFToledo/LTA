@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burndown Chart - Projeto de Campeonato</title>
+    <!-- Inclui Tailwind CSS para estilização rápida e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Define a fonte Inter para uma melhor legibilidade -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+            /* Cor de fundo slate-100 */
+        }
+
+        /* Estilos para centralizar o conteúdo na página */
+        .container-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1.25rem;
+            /* 20px */
+        }
+
+        .chart-container {
+            max-width: 900px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            /* 12px */
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            /* 24px */
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            /* 16px */
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <div class="container-wrapper">
+        <div class="chart-container">
+            <h1 class="text-3xl font-bold text-center text-slate-800 mb-2">Burndown Chart do Projeto</h1>
+            <p class="text-center text-slate-600 mb-4">
+                Este gráfico visualiza o progresso do desenvolvimento de <strong>18 requisitos</strong> (9 funcionais +
+                9 não funcionais)
+                ao longo de uma sprint de 10 dias.
+                <br>A linha real mostra um <strong class="text-red-600">atraso simulado de 2 requisitos</strong> ao
+                final do período.
+            </p>
+
+            <!-- Elemento Canvas onde o gráfico será renderizado -->
+            <div class="relative w-full h-80 md:h-96">
+                <canvas id="burndownChart"></canvas>
+            </div>
+
+            <!-- Caixa de explicação sobre como interpretar o gráfico -->
+            <div class="mt-4 p-4 bg-sky-50 border border-sky-200 text-sky-800 rounded-lg text-sm">
+                <h2 class="font-semibold text-lg mb-2">Como Ler este Gráfico:</h2>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>A <strong>Linha Ideal (Pontilhada Azul)</strong> representa o ritmo perfeito para concluir os 18
+                        requisitos em 10 dias.</li>
+                    <li>A <strong>Linha Real (Sólida Roxa)</strong> simula o progresso real da equipe, que pode variar.
+                    </li>
+                    <li>Se a linha real estiver <strong>acima</strong> da ideal, a equipe está com mais trabalho
+                        restante do que o planejado (atraso).</li>
+                    <li>Se a linha real estiver <strong>abaixo</strong> da ideal, a equipe está adiantada.</li>
+                    <li>O eixo Y representa o <strong>Trabalho Restante</strong> em Requisitos.</li>
+                    <li>O eixo X representa os <strong>Dias</strong> da Sprint.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inclui a biblioteca Chart.js para criar o gráfico -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Aguarda o carregamento completo do DOM antes de executar o script do gráfico
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('burndownChart').getContext('2d');
+
+            const totalWork = 18; // Total de requisitos (RF + RNF)
+            const totalDays = 10; // Duração da Sprint em dias
+
+            // Geração dos rótulos para o eixo X (Dias)
+            const labels = Array.from({ length: totalDays + 1 }, (_, i) => `Dia ${i}`);
+
+            // Cálculo da Linha Ideal (progresso linear constante)
+            const idealData = [];
+            const idealBurnRate = totalWork / totalDays;
+            for (let i = 0; i <= totalDays; i++) {
+                idealData.push(totalWork - (idealBurnRate * i));
+            }
+
+            // Dados simulados para a Linha Real (progresso não linear)
+            // Cada ponto representa o trabalho REMANESCENTE no final do dia
+            const actualData = [
+                18,  // Dia 0: Início com 18 requisitos
+                18,  // Dia 1: Sem progresso
+                17,  // Dia 2: 1 requisito concluído
+                15,  // Dia 3: 2 requisitos concluídos
+                13,  // Dia 4: 2 requisitos concluídos
+                11,  // Dia 5: 2 requisitos concluídos
+                9,   // Dia 6: 2 requisitos concluídos
+                7,   // Dia 7: 2 requisitos concluídos
+                6,   // Dia 8: 1 requisito concluído (ritmo diminui)
+                4,   // Dia 9: 2 requisitos concluídos
+                2    // Dia 10: 2 requisitos concluídos (termina com 2 pendentes)
+            ];
+
+            // Criação do gráfico
+            const burndownChart = new Chart(ctx, {
+                type: 'line', // Tipo de gráfico: linha
+                data: {
+                    labels: labels, // Rótulos do eixo X
+                    datasets: [{
+                        label: 'Progresso Ideal',
+                        data: idealData,
+                        borderColor: 'rgba(59, 130, 246, 0.8)', // Cor azul
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        borderWidth: 2,
+                        borderDash: [6, 6], // Linha pontilhada
+                        pointRadius: 4,
+                        pointBackgroundColor: 'rgba(59, 130, 246, 1)',
+                        pointBorderColor: '#fff',
+                        tension: 0.1
+                    }, {
+                        label: 'Progresso Real',
+                        data: actualData,
+                        borderColor: 'rgba(124, 58, 237, 0.9)', // Cor roxa
+                        backgroundColor: 'rgba(124, 58, 237, 0.1)',
+                        fill: true, // Preenche a área sob a linha
+                        borderWidth: 3,
+                        pointRadius: 5,
+                        pointBackgroundColor: 'rgba(124, 58, 237, 1)',
+                        pointBorderColor: '#fff',
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    return `${context.dataset.label}: ${context.parsed.y.toFixed(1)} Requisitos Restantes`;
+                                }
+                            }
+                        },
+                        legend: {
+                            display: true,
+                            position: 'bottom',
+                            labels: {
+                                font: { size: 14, family: 'Inter' },
+                                color: '#334155'
+                            }
+                        },
+                        title: { display: false }
+                    },
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Dias da Sprint',
+                                color: '#475569',
+                                font: { size: 16, weight: 'bold', family: 'Inter' }
+                            },
+                            grid: { display: false },
+                            ticks: {
+                                color: '#475569',
+                                font: { family: 'Inter' }
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Requisitos Restantes',
+                                color: '#475569',
+                                font: { size: 16, weight: 'bold', family: 'Inter' }
+                            },
+                            beginAtZero: true,
+                            max: totalWork, // Define o valor máximo do eixo Y
+                            grid: {
+                                color: '#e2e8f0' // Cor da grade do eixo Y
+                            },
+                            ticks: {
+                                stepSize: 2, // Define o intervalo dos marcadores do eixo Y
+                                color: '#475569',
+                                font: { family: 'Inter' }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

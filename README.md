@@ -136,6 +136,143 @@ O **Administrador da Confederação** é o responsável pelas ações organizaci
 
 ---
 
+### Burn Down Chart da Atividade
+
+![Grafico Burn](/images/Burn.png)
+
+# Dados Simulados (Linha Real)
+
+## 🗓️ Plano de Sprint (10 Dias) – Projeto Campeonato LTA
+
+Este plano distribui os 18 requisitos (9 funcionais e 9 não funcionais) em um ciclo de desenvolvimento de 10 dias, agrupando tarefas relacionadas para otimizar o fluxo de trabalho.
+
+---
+
+## 📅 Dia 1: Fundação e Segurança  
+
+**Foco:** Estabelecer a base do sistema com autenticação e autorização.
+
+- **RNF01** – Login com credenciais válidas: Implementar a tela e a lógica de login.  
+- **RNF03** – Segurança contra acesso não autorizado: Definir e aplicar as permissões para cada tipo de usuário (Cliente, Gerente, Admin).
+
+---
+
+## 📅 Dia 2: Estrutura de Administração  
+
+**Foco:** Construir as funcionalidades centrais para o Administrador organizar o evento.
+
+- **RF08** – Agendar e gerenciar eventos (admin): Permitir que o admin crie e edite as partidas, datas e horários.
+
+---
+
+## 📅 Dia 3: Gerenciamento de Equipes  
+
+**Foco:** Desenvolver as ferramentas para o Gerente de Equipe.
+
+- **RF06** – Cadastrar e editar equipes (gerente): Criar o formulário e a lógica para que gerentes possam adicionar e atualizar suas equipes.  
+- **RF07** – Cadastrar e editar membros (gerente): Permitir a gestão dos jogadores/membros dentro de cada equipe.
+
+---
+
+## 📅 Dia 4: Visualização para Clientes  
+
+**Foco:** Criar as principais telas de consulta para o usuário final.
+
+- **RF01** – Visualizar equipes: Listar as equipes participantes.  
+- **RF02** – Visualizar competições: Exibir a tabela de jogos e o calendário.
+
+---
+
+## 📅 Dia 5: Interação do Cliente - Palpites  
+
+**Foco:** Implementar a principal funcionalidade interativa do sistema.
+
+- **RF04** – Fazer palpites: Desenvolver a interface para que os clientes possam registrar seus palpites nas partidas agendadas.
+
+---
+
+## 📅 Dia 6: Acompanhamento de Resultados  
+
+**Foco:** Conectar os dados do admin com a visualização do cliente.
+
+- **RF03** – Visualizar resultados e placares: Exibir os placares das partidas finalizadas.  
+- **RF05** – Visualizar palpites e resultados: Permitir que o cliente veja seu histórico de palpites e se acertou ou errou.
+
+---
+
+## 📅 Dia 7: Finalização do Ciclo de Palpites  
+
+**Foco:** Dar ao administrador o controle para finalizar e validar os palpites.
+
+- **RF09** – Gerenciar palpites (admin): Implementar a ferramenta para o admin apurar os resultados dos palpites após o fim das partidas.
+
+---
+
+## 📅 Dia 8: Usabilidade e Compatibilidade  
+
+**Foco:** Refinar a experiência do usuário e garantir o funcionamento em diferentes plataformas.
+
+- **RNF02** – Usabilidade: Revisar todo o fluxo do sistema para garantir que seja intuitivo.  
+- **RNF07** – Compatível com navegadores web modernos: Testar e corrigir a interface em navegadores como Chrome, Firefox e Safari (desktop e mobile).
+
+---
+
+## 📅 Dia 9: Otimização e Qualidade de Código  
+
+**Foco:** Melhorar o desempenho e a manutenção do código.
+
+- **RNF04** – Respostas rápidas do sistema: Otimizar consultas ao banco de dados e o carregamento das páginas.  
+- **RNF05** – Código padronizado e fácil de manter: Refatorar o código e garantir que segue os padrões definidos.
+
+---
+
+## 📅 Dia 10: Disponibilidade e Finalização da Sprint  
+
+**Foco:** Cuidar dos requisitos de infraestrutura, backups e conformidade.
+
+- **RNF06** – Alta disponibilidade: Configurar o ambiente de produção para garantir que o sistema fique online.  
+- **RNF08** – Backup e recuperação de dados: Implementar rotinas de backup.  
+- **RNF09** – Conformidade com normas da instituição: Realizar a checagem final de todas as regras.
+
+---
+
+# Cronograma de Execução da Sprint
+
+Esta tabela detalha o progresso das tarefas com base no plano de sprint e nos dados do Burndown Chart simulado. Ela mapeia o início planeado de cada requisito com o seu dia de conclusão na simulação.
+
+- **Dia de Início:** O dia em que a tarefa foi agendada para começar, de acordo com o plano de sprint.
+- **Dia de Conclusão:** O dia em que a tarefa foi concluída, de acordo com a simulação do burndown (onde a "Linha Real" desce).
+
+| Requisito | Tarefa | Dia de Início | Dia de Conclusão | Status |
+| :--- | :--- | :---: | :---: | :--- |
+| **RNF01** | Login com credenciais válidas | 1 | 2 | Concluído |
+| **RNF03** | Segurança contra acesso não autorizado | 1 | 3 | Concluído |
+| **RF08** | Agendar e gerenciar eventos (admin) | 2 | 3 | Concluído |
+| **RF06** | Cadastrar e editar equipes (gerente) | 3 | 4 | Concluído |
+| **RF07** | Cadastrar e editar membros (gerente) | 3 | 4 | Concluído |
+| **RF01** | Visualizar equipes | 4 | 5 | Concluído |
+| **RF02** | Visualizar competições | 4 | 5 | Concluído |
+| **RF04** | Fazer palpites | 5 | 6 | Concluído |
+| **RF03** | Visualizar resultados e placares | 6 | 6 | Concluído |
+| **RF05** | Visualizar palpites e resultados | 6 | 7 | Concluído |
+| **RF09** | Gerenciar palpites (admin) | 7 | 7 | Concluído |
+| **RNF02** | Usabilidade | 8 | 8 | Concluído |
+| **RNF07** | Compatível com navegadores web modernos | 8 | 9 | Concluído |
+| **RNF04** | Respostas rápidas do sistema | 9 | 9 | Concluído |
+| **RNF05** | Código padronizado e fácil de manter | 9 | 10 | Concluído |
+| **RNF06** | Alta disponibilidade | 10 | 10 | Concluído |
+| **RNF08** | Backup e recuperação de dados | 10 | - | **Pendente** |
+| **RNF09** | Conformidade com normas da instituição | 10 | - | **Pendente** |
+
+---
+
+### Análise do Cronograma
+
+- **Início Lento:** As primeiras tarefas (`RNF01`, `RNF03`) levaram um dia a mais para serem concluídas do que o ideal, refletindo o início mais lento visto no gráfico.
+- **Recuperação:** A equipe acelerou o ritmo entre os dias 4 e 7, entregando as tarefas dentro do dia esperado.
+- **Atraso Final:** As duas últimas tarefas (`RNF08`, `RNF09`) não foram concluídas até o final do Dia 10, o que corresponde aos **2 requisitos restantes** mostrados no Burndown Chart.
+
+
 ## Cálculo de Pontos de Função
 
 | Tipo de Função | Complexidade Funcional | Fator de Peso | Quantidade | Total por Complexidade |
