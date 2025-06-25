@@ -275,28 +275,30 @@ Esta tabela detalha o progresso das tarefas com base no plano de sprint e nos da
 
 ## Cálculo de Pontos de Função
 
-| Tipo de Função | Complexidade Funcional | Fator de Peso | Quantidade | Total por Complexidade |
-| -------------- | ---------------------- | ------------- | ---------- | ---------------------- |
-| **EE**         | Baixa                  | x 3           | 0          | 0                      |
-|                | Média                  | x 4           | 0          | 0                      |
-|                | Alta                   | x 6           | 0          | 0                      |
-|                | **Total EE**           |               |            | **0**                  |
-| **SE**         | Baixa                  | x 4           | 0          | 0                      |
-|                | Média                  | x 5           | 0          | 0                      |
-|                | Alta                   | x 7           | 0          | 0                      |
-|                | **Total SE**           |               |            | **0**                  |
-| **CE**         | Baixa                  | x 3           | 0          | 0                      |
-|                | Média                  | x 4           | 0          | 0                      |
-|                | Alta                   | x 6           | 0          | 0                      |
-|                | **Total CE**           |               |            | **0**                  |
-| **ALI**        | Baixa                  | x 7           | 0          | 0                      |
-|                | Média                  | x 10          | 0          | 0                      |
-|                | Alta                   | x 15          | 0          | 0                      |
-|                | **Total ALI**          |               |            | **0**                  |
-| **AIE**        | Baixa                  | x 5           | 0          | 0                      |
-|                | Média                  | x 7           | 0          | 0                      |
-|                | Alta                   | x 10          | 0          | 0                      |
-|                | **Total AIE**          |               |            | **0**                  |
+| Tipo de Função | Complexidade Funcional | Peso | Quantidade | Total por Complexidade |
+| -------------- | ---------------------- | ---- | ---------- | ---------------------- |
+| **EE**         | Baixa                  | x 3  | 8          | 24                     |
+|                | Média                  | x 4  | 5          | 20                     |
+|                | Alta                   | x 6  | 2          | 12                     |
+|                |                        |      |            | **Total EE: 49**       |
+| **SE**         | Baixa                  | x 4  | 7          | 28                     |
+|                | Média                  | x 5  | 5          | 25                     |
+|                | Alta                   | x 7  | 1          | 7                      |
+|                |                        |      |            | **Total SE: 60**       |
+| **CE**         | Baixa                  | x 3  | 0          | 0                      |
+|                | Média                  | x 4  | 3          | 12                     |
+|                | Alta                   | x 6  | 1          | 6                      |
+|                |                        |      |            | **Total CE: 18**       |
+| **ALI**        | Baixa                  | x 7  | 1          | 7                      |
+|                | Média                  | x 10 | 3          | 30                     |
+|                | Alta                   | x 15 | 1          | 15                     |
+|                |                        |      |            | **Total ALI: 52**      |
+| **AIE**        | Baixa                  | x 5  | 7          | 35                     |
+|                | Média                  | x 7  | 1          | 7                      |
+|                | Alta                   | x 10 | 1          | 10                     |
+|                |                        |      |            | **Total AIE: 52**      |
+||||||
+|||||**Total Final: 238**|
 
 ---
 
