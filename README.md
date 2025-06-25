@@ -140,8 +140,8 @@ O **Administrador da Confederação** é o responsável pelas ações organizaci
 
 | Tipo de Função | Complexidade Funcional | Peso | Quantidade | Total por Complexidade |
 | -------------- | ---------------------- | ---- | ---------- | ---------------------- |
-| **EE**         | Baixa                  | x 3  | 7          | 21                     |
-|                | Média                  | x 4  | 4          | 16                     |
+| **EE**         | Baixa                  | x 3  | 8          | 24                     |
+|                | Média                  | x 4  | 5          | 20                     |
 |                | Alta                   | x 6  | 2          | 12                     |
 |                |                        |      |            | **Total EE: 49**       |
 | **SE**         | Baixa                  | x 4  | 7          | 28                     |
