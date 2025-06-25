@@ -278,9 +278,9 @@ Esta tabela detalha o progresso das tarefas com base no plano de sprint e nos da
 | Tipo de Função | Complexidade Funcional | Peso | Quantidade | Total por Complexidade |
 | -------------- | ---------------------- | ---- | ---------- | ---------------------- |
 | **EE**         | Baixa                  | x 3  | 12         | 36                     |
-|                | Média                  | x 4  | 7          | 28                     |
+|                | Média                  | x 4  | 8          | 32                     |
 |                | Alta                   | x 6  | 4          | 24                     |
-|                |                        |      |            | **Total EE: 88**       |
+|                |                        |      |            | **Total EE: 92**       |
 | **SE**         | Baixa                  | x 4  | 7          | 28                     |
 |                | Média                  | x 5  | 5          | 25                     |
 |                | Alta                   | x 7  | 1          | 7                      |
@@ -298,7 +298,7 @@ Esta tabela detalha o progresso das tarefas com base no plano de sprint e nos da
 |                | Alta                   | x 10 | 1          | 10                     |
 |                |                        |      |            | **Total AIE: 52**      |
 ||||||
-|||||**Total Final: 280**|
+|||||**Total Final: 284**|
 
 ---
 
