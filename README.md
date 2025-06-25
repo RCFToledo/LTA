@@ -137,14 +137,3 @@
 | CT-RNF09 | RNF  | RNF08     | Verificação da integridade do backup         | Executar script de verificação                                                 | Script deve retornar "Backup OK"                                                             |
 | CT-RNF10 | RNF  | RNF08     | Teste de recuperação de backup               | Restaurar backup em ambiente de homologação                                    | Tempo de recuperação (RTO) inferior a 1 hora                                                 |
 | CT-RNF11 | RNF  | RNF09     | Verificar exigência de maioridade no palpite | Revisão manual do fluxo                                                        | Confirmação de maioridade deve ser obrigatória e funcional antes do primeiro palpite         |
-
----
-
-# Meu Projeto de Campeonato Esportivo
-
-## Burn Down Chart
-
-[Image of Burn Down Chart]
-![Burn Down Chart da Atividade](Captura de tela 2025-06-24 212227.png)
-
-Este gráfico visualiza o progresso simulado das etapas do projeto.
