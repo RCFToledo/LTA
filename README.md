@@ -140,8 +140,11 @@
 
 ---
 
-## 📌 Observações
+# Meu Projeto de Campeonato Esportivo
 
-Este projeto propõe uma plataforma completa de gestão e acompanhamento de campeonatos com diferentes tipos de usuários, funcionalidades robustas e foco em confiabilidade, usabilidade e segurança.
+## Burn Down Chart
 
----
+[Image of Burn Down Chart]
+![Burn Down Chart da Atividade](Captura de tela 2025-06-24 212227.png)
+
+Este gráfico visualiza o progresso simulado das etapas do projeto.
