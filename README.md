@@ -277,10 +277,10 @@ Esta tabela detalha o progresso das tarefas com base no plano de sprint e nos da
 
 | Tipo de Função | Complexidade Funcional | Peso | Quantidade | Total por Complexidade |
 | -------------- | ---------------------- | ---- | ---------- | ---------------------- |
-| **EE**         | Baixa                  | x 3  | 8          | 24                     |
-|                | Média                  | x 4  | 5          | 20                     |
-|                | Alta                   | x 6  | 2          | 12                     |
-|                |                        |      |            | **Total EE: 49**       |
+| **EE**         | Baixa                  | x 3  | 12         | 36                     |
+|                | Média                  | x 4  | 7          | 28                     |
+|                | Alta                   | x 6  | 4          | 24                     |
+|                |                        |      |            | **Total EE: 88**       |
 | **SE**         | Baixa                  | x 4  | 7          | 28                     |
 |                | Média                  | x 5  | 5          | 25                     |
 |                | Alta                   | x 7  | 1          | 7                      |
@@ -290,15 +290,15 @@ Esta tabela detalha o progresso das tarefas com base no plano de sprint e nos da
 |                | Alta                   | x 6  | 1          | 6                      |
 |                |                        |      |            | **Total CE: 18**       |
 | **ALI**        | Baixa                  | x 7  | 1          | 7                      |
-|                | Média                  | x 10 | 3          | 30                     |
+|                | Média                  | x 10 | 4          | 40                     |
 |                | Alta                   | x 15 | 1          | 15                     |
-|                |                        |      |            | **Total ALI: 52**      |
+|                |                        |      |            | **Total ALI: 62**      |
 | **AIE**        | Baixa                  | x 5  | 7          | 35                     |
 |                | Média                  | x 7  | 1          | 7                      |
 |                | Alta                   | x 10 | 1          | 10                     |
 |                |                        |      |            | **Total AIE: 52**      |
 ||||||
-|||||**Total Final: 238**|
+|||||**Total Final: 280**|
 
 ---
 
